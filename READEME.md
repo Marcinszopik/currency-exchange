@@ -1,5 +1,4 @@
- https://api.exchangeratesapi.io/latest?symbols=USD,GBPA user 
-Visit the ExchangeRate-API site. 
+
 Setup Instructions
 
 Project Title
@@ -12,6 +11,23 @@ One Paragraph of project description goes here
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+
+***Description***
+
+# Currency Exchange #
+
+## The purpose of this app is to allow a user to choose a currency type and amount, and choose which type of currency they would like the exchange rate for
+
+### Written by Marcin Szopik 08/12/2020
+
+**How it works**
+
+1. the async callback function in main instantiates a new object called currency Exchanger.
+2. A new variable called response is created, which calls the function callAPI(). https://api.exchangeratesapi.io/latest?symbols=USD,GBPA user 
+Visit the ExchangeRate-API site. 
+3. callAPI runs a try-catch case that calls the function getRate(). getRate() is a switch case with each case being a newUrl with the result we want to provide.
+4. the newUrl is given to a fetch command as an argument. we then wait to see if the request was successful. If so, we return the response as the variable jsonifiedResponse.
+5. Our jsonifiedResponse is given to getElements() as an argument. getElements invokes an if statement that returns a result if response is true.
 
 
 Available Scripts
